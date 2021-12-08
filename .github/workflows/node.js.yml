@@ -22,10 +22,6 @@ jobs:
 
 
     steps:    
-    - uses: actions/checkout@v2    
-    - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
-    
     - uses: actions/checkout@v2
     - name: Build using Node.js v${{ matrix.node-version }}
       uses: actions/setup-node@v2
