@@ -1,10 +1,20 @@
 var express = require('express')
 var app = express()
+const port = 8080;
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
+
+app.get('/:name', function (req, res) {  
+  res.send("Hello " + req.params.name);
 })
 
-app.listen(8080, function () {
-  console.log('Listening on port 8080...')
+/**
+ * All errors will be redirected here
+ */
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Sorry, but something broke!')
 })
+
+app.listen(port, function () {
+  console.log('Listening on port ' + port +'...')
+});
