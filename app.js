@@ -1,6 +1,5 @@
 var express = require('express')
 var app = express()
-const port = 8080;
 
 
 app.get('/:name', function (req, res) {  
@@ -15,6 +14,4 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Sorry, but something broke!')
 })
 
-app.listen(port, function () {
-  console.log('Listening on port ' + port +'...')
-});
+module.exports = app;
