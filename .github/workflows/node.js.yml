@@ -10,9 +10,8 @@ on:
     branches: [ main ]
 
 jobs:
-
   njsscan:
-    name: njsscan code scanning
+    name: Code Secutity check
     runs-on: ubuntu-latest    
     steps:
     - name: Checkout the code
