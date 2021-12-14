@@ -5,8 +5,8 @@ const app = require('./app');
 describe("Test the root path", () => {
   test("It should response the GET method", async () => {    
     return request(app)
-      .get("/sonja")
-      .expect("Hello sonja")
+      .get("/Ubeton")
+      .expect("Hello Ubeton")
       .expect(200);
   });
 });

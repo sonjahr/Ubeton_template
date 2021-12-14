@@ -10,8 +10,8 @@ app.get('/:name', function (req, res) {
  * All errors will be redirected here
  */
 app.use(function (err, req, res, next) {
-  console.error(err.stack)
-  res.status(500).send('Sorry, but something broke!')
+  console.error(err.stack);
+  res.status(500).send('Sorry, but something broke!');
 })
 
 module.exports = app;
